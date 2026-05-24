@@ -82,14 +82,23 @@ if (frameCount % 20 < 10) { //si al dividir el total del framecount por el núme
 
 void BotonReinicio(){
 rectMode(CENTER);
-fill(255);
-rect(width/2, 340, 200, 50, 25);
+if (mouseX < 420 &&  mouseX > 218 && mouseY > 315 && mouseY < 365) {
+fill(255, 255, 255, 255);
+rect(320, 340, 200, 50, 25);
 fill(0);
 textSize(28);
-text("REINICIAR", width/2, 350);  
+text("REINICIAR", 320, 350);  
+} else {
+  fill(255, 255, 255, 150);
+  rect(320, 340, 200, 50, 25);
+  fill(0);
+  textSize(28);
+  text("REINICIAR", 320, 350);  
 }
-
+}
 void Reiniciar(){
+  
+  
   rectMode(CORNER);
   pantalla = 0;
   iniciar = false;
